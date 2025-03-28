@@ -3,12 +3,15 @@ import { Drawer, List, ListItem, ListItemText, Typography, Box, Divider, ListIte
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import HomeIcon from '@mui/icons-material/Home'; // Example icon
 import EventIcon from '@mui/icons-material/Event'; // Example icon
+import WarningIcon from '@mui/icons-material/Warning'; //Error icon
 import InfoIcon from '@mui/icons-material/Info'; // Example icon for the '#' menu item
 
 const Sidebar = () => {
     const menuItems = [
         { text: 'Regular Transactions', path: '/dashboard', icon: <HomeIcon /> }, // Regular transactions link
         { text: 'System Holiday Transactions', path: '/holiday-transactions', icon: <EventIcon /> }, // Holiday transactions link
+        { text: 'Error Transactions', path: '/error-transactions', icon: <WarningIcon /> }, // Holiday transactions link
+
     ];
 
     const additionalMenuItems = [

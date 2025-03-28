@@ -24,4 +24,16 @@ export const fetchHolidayTransactions = async () => {
     }
 };
 
+// Fetch error transactions from the backend (new endpoint)
+export const fetchErrorTransactions = async () => {
+    try {
+        const response = await axios.get(`${API_BASE_URL}/error-transactions`);
+        return response.data.transactions || [];
+    } catch (error) {
+        console.error('Error fetching error transactions:', error);
+        return [];
+    }
+};
+
+
 // You can add more utility functions in the future, e.g., posting new transactions, etc.

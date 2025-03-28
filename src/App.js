@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Import Navigate
 import Dashboard from './pages/Dashboard';
 import HolidayTransactionsPage from './pages/HolidayTransactionsPage';
+import ErrorTransactionsPage from './pages/ErrorTransactionsPage'
 
 const App = () => {
   return (
@@ -15,6 +16,9 @@ const App = () => {
 
         {/* Holiday Transactions page */}
         <Route path="/holiday-transactions" element={<HolidayTransactionsPage />} />
+
+        {/* Error Transactions page */}
+        <Route path="/error-transactions" element={<ErrorTransactionsPage />} />
       </Routes>
     </Router>
   );
